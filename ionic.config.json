@@ -1,0 +1,7 @@
+{
+  "name": "backgroundApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

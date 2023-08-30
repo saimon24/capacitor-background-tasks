@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Map</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <capacitor-google-map #map></capacitor-google-map>
+  <ion-list>
+    <ion-item *ngFor="let checkin of checkins">
+      <ion-label>
+        <h2>{{ checkin.location.longitude }} - {{ checkin.location.latitude }}</h2>
+        <p>{{ checkin.time | date:'medium' }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

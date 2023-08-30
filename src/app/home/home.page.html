@@ -1,20 +1,24 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title> Capacitor Background </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-button (click)="performBackgroundFetch()" expand="full">Perform Background Call</ion-button>
+  <ion-button (click)="scheduleNotification()" expand="full">Schedule Local Notification</ion-button>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-button (click)="testSave()" expand="full">Save values</ion-button>
+  <ion-button (click)="testLoad()" expand="full">Load values</ion-button>
+  <ion-button routerLink="/map" expand="full">Map</ion-button>
+
+  <ion-item *ngIf="user">
+    <ion-avatar slot="start">
+      <img [src]="user.picture.thumbnail" />
+    </ion-avatar>
+    <ion-label>
+      <h2>{{ user.name.first }} {{user.name.last}}</h2>
+      <p>{{ user.email }}</p>
+    </ion-label>
+  </ion-item>
 </ion-content>

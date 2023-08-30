@@ -8,6 +8,7 @@
 </ion-header>
 
 <ion-content>
+  <ion-button (click)="loadCheckins()" expand="full">Load Checkins</ion-button>
   <capacitor-google-map #map></capacitor-google-map>
   <ion-list>
     <ion-item *ngFor="let checkin of checkins">

@@ -28,7 +28,7 @@ export class HomePage {
   // Test the background fetch
   async performBackgroundFetch() {
     const result = await BackgroundRunner.dispatchEvent({
-      label: 'com.capacitor.background.task',
+      label: 'com.capacitor.background.check',
       event: 'fetchTest',
       details: {},
     });
@@ -38,7 +38,7 @@ export class HomePage {
   // Schedule a notification from background
   async scheduleNotification() {
     await BackgroundRunner.dispatchEvent({
-      label: 'com.capacitor.background.task',
+      label: 'com.capacitor.background.check',
       event: 'notificationTest',
       details: {},
     });
@@ -47,7 +47,7 @@ export class HomePage {
   // Test the KV Store
   async testSave() {
     const result = await BackgroundRunner.dispatchEvent({
-      label: 'com.capacitor.background.task',
+      label: 'com.capacitor.background.check',
       event: 'testSave',
       details: {},
     });
@@ -56,7 +56,7 @@ export class HomePage {
 
   async testLoad() {
     const result = await BackgroundRunner.dispatchEvent({
-      label: 'com.capacitor.background.task',
+      label: 'com.capacitor.background.check',
       event: 'testLoad',
       details: {},
     });

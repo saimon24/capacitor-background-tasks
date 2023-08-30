@@ -17,7 +17,6 @@ export class MapPage implements AfterViewInit {
 
   ngAfterViewInit() {
     this.createMap();
-    this.loadCheckins();
   }
 
   async createMap() {
@@ -37,7 +36,7 @@ export class MapPage implements AfterViewInit {
 
   loadCheckins = async () => {
     const result = (await BackgroundRunner.dispatchEvent({
-      label: 'com.capacitor.background.task',
+      label: 'com.capacitor.background.check',
       event: 'loadCheckins',
       details: {},
     })) as any;

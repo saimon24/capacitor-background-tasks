@@ -16,6 +16,6 @@ For Google Maps, please include your API key inside the `src/app/map/map.page.ts
 
 ## Preview
 <div style="display: flex; flex-direction: 'row';">
-<img src="./screenshots/1.png" width="50%">
-<img src="./screenshots/2.png" width=50%>
+<img src="./screenshots/1.png" width="45%">
+<img src="./screenshots/2.png" width="45%">
 </div>
